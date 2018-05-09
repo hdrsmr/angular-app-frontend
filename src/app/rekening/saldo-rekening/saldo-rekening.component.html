@@ -1,0 +1,10 @@
+<h1>
+  saldo-rekening works!
+</h1>
+<app-pilihan-rekening (pilihan)="pilihRekening($event)"></app-pilihan-rekening>
+
+<!--<div *ngIf="pilihanRekening">-->
+  <!--Rekening nomer {{pilihanRekening.nomor}} sekian Milik {{pilihanRekening.nama}}-->
+<!--</div>-->
+
+<app-detail-rekening [pilihanRekening]="pilihanRekening"></app-detail-rekening>

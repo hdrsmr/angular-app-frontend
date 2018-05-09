@@ -1,0 +1,30 @@
+<p>
+  daftar-transfer works!
+</p>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <!--<th scope="col">Nomor Rekening</th>-->
+    <th scope="col">Rek Sumber</th>
+    <th scope="col">Rek Tujuan</th>
+    <th scope="col">Nilai</th>
+    <th scope="col">Berita</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let rek of daftarTransfer">
+
+    <td>{{rek.sumber.nomor}} - {{rek.sumber.nama}}</td>
+    <td>{{rek.tujuan.nomor}} - {{rek.tujuan.nama}}</td>
+    <td>{{rek.nilai}}</td>
+    <td>{{rek.berita}}</td>
+    <td>
+      <button class="btn btn-sm" (click)="hapus(rek)">detail
+      </button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+

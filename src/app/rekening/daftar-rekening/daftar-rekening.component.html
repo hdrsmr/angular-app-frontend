@@ -1,0 +1,22 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Nomor Rekening</th>
+    <th scope="col">Nama Rekening</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let rek of daftarRekening">
+
+    <td>{{rek.nomor}}</td>
+    <td>{{rek.nama}}</td>
+    <td>
+      <button class="btn btn-sm" (click)="tampilkanDetail(rek)">detail
+      </button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+

@@ -1,0 +1,30 @@
+<p>
+  Rekening sumber
+</p>
+<app-pilihan-rekening (pilihan)="transfer.sumber = $event"></app-pilihan-rekening>
+<p *ngIf="transfer.sumber">Nama Pemilik Rekening Sumber : {{transfer.sumber.nama}} - {{transfer.sumber.nomor}}</p>
+
+<p>
+  Rekening Tujuan
+</p>
+<app-pilihan-rekening (pilihan)="transfer.tujuan = $event"></app-pilihan-rekening>&nbsp;
+
+<p *ngIf="transfer.tujuan">Nama Pemilik Rekening Tujuan : {{transfer.tujuan.nama}} - {{transfer.tujuan.nomor}}</p>
+
+<br/>
+<br/>
+
+<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Nilai</label>
+    <input [(ngModel)]="transfer.nilai" name="nilai" type="text" class="form-control" id="formGroupExampleInput"
+           placeholder="Rp.1000.000,00">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Berita</label>
+    <input [(ngModel)]="transfer.berita" name="ket" type="text" class="form-control" id="formGroupExampleInput2"
+           placeholder="">
+  </div>
+</form>
+
+<button class="btn btn-primary" (click)="lakukanTransfer()">Transfer</button>
